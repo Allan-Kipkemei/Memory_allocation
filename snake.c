@@ -131,19 +131,27 @@ int main() {
     init_snake();
     place_food();
 
+    int paused = 0;
+
     while (1) {
         int ch = getch();
         if (ch == 'q') break;  // Quit the game
-        if (ch == KEY_UP && direction != 'D') direction = 'U';
-        if (ch == KEY_DOWN && direction != 'U') direction = 'D';
-        if (ch == KEY_LEFT && direction != 'R') direction = 'L';
-        if (ch == KEY_RIGHT && direction != 'L') direction = 'R';
+        if (ch == 'p') paused = !paused;  // Toggle pause
 
-        move_snake();
-        if (check_collision()) break;
+        if (!paused) {  // Only update game if not paused
+            if (ch == KEY_UP && direction != 'D') direction = 'U';
+            if (ch == KEY_DOWN && direction != 'U') direction = 'D';
+            if (ch == KEY_LEFT && direction != 'R') direction = 'L';
+            if (ch == KEY_RIGHT && direction != 'L') direction = 'R';
 
-        update_food();
+            move_snake();
+            if (check_collision()) break;  // End game on collision
+
+            update_food();
+        }
+
         draw_game();
+        if (paused) mvprintw(HEIGHT + 2, 0, "Game Paused. Press 'p' to resume.");
 
         usleep(delay);
     }
