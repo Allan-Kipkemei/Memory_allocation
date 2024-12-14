@@ -4,8 +4,8 @@
 #include <unistd.h>
 
 #define INITIAL_DELAY 100000  // Initial delay in microseconds
-#define WIDTH 60
-#define HEIGHT 50
+#define WIDTH 50
+#define HEIGHT 20
 
 typedef struct Snake {
     int x, y;
