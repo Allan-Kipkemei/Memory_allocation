@@ -1,57 +1,29 @@
-# 🐍 Snake Game (C with ncurses)
+# Snake Game in C
 
-This is a classic terminal-based **Snake Game** written in **C**, using the **ncurses** library to provide simple yet visually appealing gameplay.
+A simple terminal-based Snake game implemented in C using the `ncurses` library. The game allows the player to control the snake using arrow keys, eat food to grow, and avoid collisions with the walls and its own body. The goal is to achieve the highest score by eating food while avoiding collisions.
 
----
+## Table of Contents
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [How to Play](#how-to-play)
+- [Game Controls](#game-controls)
+- [Code Explanation](#code-explanation)
+- [License](#license)
 
-## 🚀 Features
+## Features
+- Simple Snake game implementation in C.
+- Controls using arrow keys.
+- Dynamic speed adjustment as the player eats food.
+- Game over when the snake collides with the wall or itself.
+- Score tracking.
+- Written using the `ncurses` library for terminal-based graphics.
 
-- **Classic Snake Mechanics**: Move the snake, eat food, and grow longer.
-- **Dynamic Speed**: The snake moves faster as you score more points.
-- **Collision Detection**: The game ends if the snake hits the walls or itself.
-- **Pause/Resume**: Pause the game anytime with a keypress.
-- **Lightweight**: Runs in any terminal with minimal resource usage.
+## Requirements
+- C compiler (GCC recommended).
+- `ncurses` library installed on your system for terminal graphics.
 
----
-
-## 📋 Requirements
-
-- **C Compiler** (e.g., GCC)
-- **ncurses Library** installed on your system.
-
-### Install ncurses (Linux/Ubuntu/Debian):
-
+### Installing `ncurses` (Ubuntu)
+If you're using Ubuntu, you can install `ncurses` by running:
 ```bash
 sudo apt-get install libncurses5-dev libncursesw5-dev
-# 🐍 Snake Game (C with ncurses)
-
-This is a classic terminal-based **Snake Game** written in **C**, using the **ncurses** library to provide simple yet visually appealing gameplay.
-
----
-
-## 🚀 Features
-
-- **Classic Snake Mechanics**: Move the snake, eat food, and grow longer.
-- **Dynamic Speed**: The snake moves faster as you score more points.
-- **Collision Detection**: The game ends if the snake hits the walls or itself.
-- **Pause/Resume**: Pause the game anytime with a keypress.
-- **Lightweight**: Runs in any terminal with minimal resource usage.
-
----
-
-## 📋 Requirements
-
-- **C Compiler** (e.g., GCC)
-- **ncurses Library** installed on your system.
-
-### Install ncurses (Linux/Ubuntu/Debian):
-
-```bash
-sudo apt-get install libncurses5-dev libncursesw5-dev
-
-
-git clone https://github.com/yourusername/snake-game.git
-cd snake-game
-
-
-gcc -o snake_game snake_game.c -lncurses
